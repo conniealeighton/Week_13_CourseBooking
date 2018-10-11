@@ -1,4 +1,4 @@
-package com.example.codeclan.coursebookingservice.repositories.customerrepository;
+package com.example.codeclan.coursebookingservice.repositories.bookingrepository;
 
-public class BookingRepositoryCustom {
+public interface BookingRepositoryCustom {
 }
