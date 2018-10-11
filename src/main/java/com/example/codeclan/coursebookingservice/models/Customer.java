@@ -4,7 +4,6 @@ package com.example.codeclan.coursebookingservice.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.List;
 
