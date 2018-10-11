@@ -50,7 +50,7 @@ public class CustomerRepositoryImpl implements  CustomerRepositoryCustom{
             cr.createAlias("bookings", "booking");
             cr.createAlias("booking.course", "course");
             cr.add(Restrictions.eq("course.id", id));
-            cr.add(Restrictions.eq("town", town));
+            cr.add(Restrictions.eq("town", town).ignoreCase());
             results = cr.list();
         } catch (HibernateException e) {
             e.printStackTrace();
@@ -71,7 +71,7 @@ public class CustomerRepositoryImpl implements  CustomerRepositoryCustom{
             cr.createAlias("bookings", "booking");
             cr.createAlias("booking.course", "course");
             cr.add(Restrictions.eq("course.id", courseId));
-            cr.add(Restrictions.eq("town", town));
+            cr.add(Restrictions.eq("town", town).ignoreCase());
             cr.add(Restrictions.gt("age", age));
             results = cr.list();
         } catch (HibernateException e) {
