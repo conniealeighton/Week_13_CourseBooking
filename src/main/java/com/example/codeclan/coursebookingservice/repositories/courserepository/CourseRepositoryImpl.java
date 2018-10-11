@@ -43,7 +43,7 @@ public class CourseRepositoryImpl implements CourseRepositoryCustom{
             Criteria cr = session.createCriteria(Course.class);
             cr.createAlias("bookings", "booking");
             cr.createAlias("booking.customer", "customer");
-            cr.add(Restrictions.eq("customer.id", "id"));
+            cr.add(Restrictions.eq("customer.id", id));
             results = cr.list();
         } catch (HibernateException e) {
             e.printStackTrace();
