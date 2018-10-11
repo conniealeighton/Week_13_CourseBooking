@@ -1,5 +1,6 @@
 package com.example.codeclan.coursebookingservice.controllers;
 
+import com.example.codeclan.coursebookingservice.models.Booking;
 import com.example.codeclan.coursebookingservice.models.Course;
 import com.example.codeclan.coursebookingservice.models.Customer;
 import com.example.codeclan.coursebookingservice.repositories.courserepository.CourseRepository;
@@ -24,8 +25,10 @@ public class CustomerController {
         return customerRepository.getAllCustomersFromCourse(id);
     }
 
-
-
+    @GetMapping(value = "/town/{town}/course/{id}")
+    public List<Customer> GetAllCustomersFromTownAndCourse(@PathVariable String town, @PathVariable Long id){
+        return customerRepository.GetAllCustomersFromTownAndCourse(town, id);
+    }
 
 }
 

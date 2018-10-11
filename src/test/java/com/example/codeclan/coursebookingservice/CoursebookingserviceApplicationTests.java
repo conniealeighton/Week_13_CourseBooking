@@ -40,5 +40,11 @@ public class CoursebookingserviceApplicationTests {
 		List<Customer> found = customerRepository.getAllCustomersFromCourse(1L);
 		assertEquals(1, found.size());
 	}
+
+	@Test
+	public void canGetCustomerFromCourseAndTown() {
+		List<Customer> found = customerRepository.GetAllCustomersFromTownAndCourse("Glasgow", 1L);
+		assertEquals(1, found.size());
+	}
 }
 
